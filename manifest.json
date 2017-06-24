@@ -4,12 +4,13 @@
   "version": "1.2",
   "background": { "scripts": ["background.js"] },
   "browser_action": {
-      "default_icon": "notvisited.png"
+      "default_icon": "visited.png"
   },
   "permissions": [
     "history",
 	"tabs",
-	"webNavigation"
+	"activeTab",
+	"*://*/"
   ],
   "manifest_version": 2
 }
