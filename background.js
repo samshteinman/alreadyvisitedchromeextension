@@ -5,8 +5,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 	chrome.history.getVisits({url: tab.url}, function(results)
 		{	
 			if(results.length > 1)
-			{
-				
+			{				
 				chrome.tabs.executeScript(tabId, {
     code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="BEEN HERE BEFORE"; div.style.fontSize = "100px";'
   });
@@ -14,33 +13,9 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 			else
 	{
 		chrome.tabs.executeScript(tabId,{
-//    code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="NOT BEEN HERE BEFORE";'
 code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="NOT BEEN HERE BEFORE"; div.style.fontSize = "100px";'
   });
 			}
 		});	
 	}
 });
-
-/*
-chrome.history.onVisited.addListener(function(item)
-{
-	chrome.history.getVisits({url: item.url}, function(results)
-		{	
-			if(results.length > 1)
-			{
-				
-				chrome.tabs.executeScript({
-    code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="BEEN HERE BEFORE"; div.style.fontSize = "100px";'
-  });
-			}
-			else
-	{
-		chrome.tabs.executeScript({
-//    code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="NOT BEEN HERE BEFORE";'
-code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="NOT BEEN HERE BEFORE"; div.style.fontSize = "100px";'
-  });
-			}
-		});
-});
-*/
