@@ -11,4 +11,4 @@ Extension that lets you know if you've visited a website already
 
 #5 Select folder where extension resides
 
-#6 Every website that you've been to before will now have a giant header or footer that says "BEEN HERE BEFORE"
+#6 Icon goes red if you've been there before, green if you haven't
