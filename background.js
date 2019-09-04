@@ -5,16 +5,12 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 		chrome.history.getVisits({url: tab.url}, function(results)
 		{	
 			if(results.length > 1)
-			{				
-				chrome.tabs.executeScript(tabId, {
-    								code: 'var div=document.createElement("div"); document.body.prepend(div); div.innerText="BEEN HERE BEFORE"; div.style.fontSize = "100px";'
- 							 });
+			{			
+				chrome.browserAction.setIcon({path: "visited.png"});	
 			}
 			else
 			{
-				chrome.tabs.executeScript(tabId,{
-								code: 'var div=document.createElement("div"); document.body.prepend(div); div.innerText="NOT BEEN HERE BEFORE"; div.style.fontSize = "100px";'
- 							 });
+				chrome.browserAction.setIcon({path: "notvisited.png"});	
 			}
 		});	
 	}
