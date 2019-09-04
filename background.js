@@ -7,13 +7,13 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab)
 			if(results.length > 1)
 			{				
 				chrome.tabs.executeScript(tabId, {
-    								code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="BEEN HERE BEFORE"; div.style.fontSize = "100px";'
+    								code: 'var div=document.createElement("div"); document.body.prepend(div); div.innerText="BEEN HERE BEFORE"; div.style.fontSize = "100px";'
  							 });
 			}
 			else
 			{
 				chrome.tabs.executeScript(tabId,{
-								code: 'var div=document.createElement("div"); document.body.append(div); div.innerText="NOT BEEN HERE BEFORE"; div.style.fontSize = "100px";'
+								code: 'var div=document.createElement("div"); document.body.prepend(div); div.innerText="NOT BEEN HERE BEFORE"; div.style.fontSize = "100px";'
  							 });
 			}
 		});	
