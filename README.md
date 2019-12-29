@@ -11,4 +11,4 @@ Extension that lets you know if you've visited a website already
 
 #5 Select folder where extension resides
 
-#6 Icon goes red if you've been there before, green if you haven't
+#6 Icon goes red if you've been there before(i.e if it's in your history), green if you haven't
