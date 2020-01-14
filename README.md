@@ -1,5 +1,5 @@
 # Already Visited Chrome Extension
-Extension that lets you know if you've visited a website already
+Extension that lets you know if you've visited a website already(needed it for SEO testing, can't remember exactly)
 
 #1 Download this extension or git clone
 
